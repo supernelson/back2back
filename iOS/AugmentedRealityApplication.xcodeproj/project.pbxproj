@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF0E2D971AE90472004180B0 /* WikitudeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D961AE90472004180B0 /* WikitudeSDK.framework */; };
+		84AC94671D7A54D40030CEFE /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94661D7A54D40030CEFE /* libc++.1.dylib */; };
+		84AC94691D7A54F50030CEFE /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94681D7A54F50030CEFE /* libz.1.dylib */; };
+		84AC946D1D7A59E40030CEFE /* WikitudeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */; };
 		DF0E2DA81AE9054C004180B0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D981AE9054C004180B0 /* Accelerate.framework */; };
 		DF0E2DA91AE9054C004180B0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D991AE9054C004180B0 /* AssetsLibrary.framework */; };
 		DF0E2DAA1AE9054C004180B0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D9A1AE9054C004180B0 /* AVFoundation.framework */; };
@@ -17,8 +19,6 @@
 		DF0E2DAE1AE9054C004180B0 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D9E1AE9054C004180B0 /* CoreMotion.framework */; };
 		DF0E2DAF1AE9054C004180B0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2D9F1AE9054C004180B0 /* CoreVideo.framework */; };
 		DF0E2DB01AE9054C004180B0 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA01AE9054C004180B0 /* JavaScriptCore.framework */; };
-		DF0E2DB11AE9054C004180B0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA11AE9054C004180B0 /* libc++.dylib */; };
-		DF0E2DB21AE9054C004180B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA21AE9054C004180B0 /* libz.dylib */; };
 		DF0E2DB31AE9054C004180B0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA31AE9054C004180B0 /* MediaPlayer.framework */; };
 		DF0E2DB41AE9054C004180B0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA41AE9054C004180B0 /* OpenGLES.framework */; };
 		DF0E2DB51AE9054C004180B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0E2DA51AE9054C004180B0 /* QuartzCore.framework */; };
@@ -45,7 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DF0E2D961AE90472004180B0 /* WikitudeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WikitudeSDK.framework; path = AugmentedRealityApplication/Frameworks/WikitudeSDK.framework; sourceTree = "<group>"; };
+		84AC94641D7A54630030CEFE /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../usr/lib; sourceTree = "<group>"; };
+		84AC94661D7A54D40030CEFE /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		84AC94681D7A54F50030CEFE /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		84AC946A1D7A59930030CEFE /* WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34"; path = "../../../Downloads/WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34"; sourceTree = "<group>"; };
+		84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WikitudeSDK.framework; path = "../../../Downloads/WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34/Framework/WikitudeSDK.framework"; sourceTree = "<group>"; };
 		DF0E2D981AE9054C004180B0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		DF0E2D991AE9054C004180B0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DF0E2D9A1AE9054C004180B0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AC946D1D7A59E40030CEFE /* WikitudeSDK.framework in Frameworks */,
+				84AC94691D7A54F50030CEFE /* libz.1.dylib in Frameworks */,
+				84AC94671D7A54D40030CEFE /* libc++.1.dylib in Frameworks */,
 				DF0E2DA81AE9054C004180B0 /* Accelerate.framework in Frameworks */,
 				DF0E2DA91AE9054C004180B0 /* AssetsLibrary.framework in Frameworks */,
 				DF0E2DAA1AE9054C004180B0 /* AVFoundation.framework in Frameworks */,
@@ -92,14 +99,11 @@
 				DF0E2DAE1AE9054C004180B0 /* CoreMotion.framework in Frameworks */,
 				DF0E2DAF1AE9054C004180B0 /* CoreVideo.framework in Frameworks */,
 				DF0E2DB01AE9054C004180B0 /* JavaScriptCore.framework in Frameworks */,
-				DF0E2DB11AE9054C004180B0 /* libc++.dylib in Frameworks */,
-				DF0E2DB21AE9054C004180B0 /* libz.dylib in Frameworks */,
 				DF0E2DB31AE9054C004180B0 /* MediaPlayer.framework in Frameworks */,
 				DF0E2DB41AE9054C004180B0 /* OpenGLES.framework in Frameworks */,
 				DF0E2DB51AE9054C004180B0 /* QuartzCore.framework in Frameworks */,
 				DF0E2DB61AE9054C004180B0 /* Security.framework in Frameworks */,
 				DF0E2DB71AE9054C004180B0 /* SystemConfiguration.framework in Frameworks */,
-				DF0E2D971AE90472004180B0 /* WikitudeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +120,11 @@
 		DF0E2D941AE8E6DD004180B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */,
+				84AC946A1D7A59930030CEFE /* WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34 */,
+				84AC94681D7A54F50030CEFE /* libz.1.dylib */,
+				84AC94661D7A54D40030CEFE /* libc++.1.dylib */,
+				84AC94641D7A54630030CEFE /* lib */,
 				DF0E2D981AE9054C004180B0 /* Accelerate.framework */,
 				DF0E2D991AE9054C004180B0 /* AssetsLibrary.framework */,
 				DF0E2D9A1AE9054C004180B0 /* AVFoundation.framework */,
@@ -132,7 +141,6 @@
 				DF0E2DA51AE9054C004180B0 /* QuartzCore.framework */,
 				DF0E2DA61AE9054C004180B0 /* Security.framework */,
 				DF0E2DA71AE9054C004180B0 /* SystemConfiguration.framework */,
-				DF0E2D961AE90472004180B0 /* WikitudeSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				TargetAttributes = {
 					DF8B55F41AE844D300E8075D = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3D4NL969BE;
 					};
 					DF8B560D1AE844D400E8075D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -429,6 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AugmentedRealityApplication/Frameworks",
@@ -437,7 +449,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = b2b10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -445,6 +459,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AugmentedRealityApplication/Frameworks",
@@ -453,7 +470,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = b2b10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
