@@ -1,10 +1,49 @@
 var World = {
 	loaded: false,
 	rotating: false,
+    
+    // 22222 POI-Marker asset
+markerDrawable_idle: null,
 
 	init: function initFn() {
 		this.createModelAtLocation();
 	},
+    
+    // ////////////////////////////////
+    
+    // called to inject new POI data
+loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
+    
+    /*
+     The example Image Recognition already explained how images are loaded and displayed in the augmented reality view. This sample loads an AR.ImageResource when the World variable was defined. It will be reused for each marker that we will create afterwards.
+     */
+    World.markerDrawable_idle = new AR.ImageResource("assets/download.png");
+    
+    /*
+     Since there are additional changes concerning the marker it makes sense to extract the code to a separate Marker class (see marker.js). Parts of the code are moved from loadPoisFromJsonData to the Marker-class: the creation of the AR.GeoLocation, the creation of the AR.ImageDrawable and the creation of the AR.GeoObject. Then instantiate the Marker in the function loadPoisFromJsonData:
+     */
+    var marker = new Marker(poiData);
+    
+    // Updates status message as a user feedback that everything was loaded properly.
+    World.updateStatusMessage('1 place loaded');
+},
+    
+    // updates status message shon in small "i"-button aligned bottom center
+updateStatusMessage: function updateStatusMessageFn(message, isWarning) {
+    
+    var themeToUse = isWarning ? "e" : "c";
+    var iconToUse = isWarning ? "alert" : "info";
+    
+    $("#status-message").html(message);
+    $("#popupInfoButton").buttonMarkup({
+                                       theme: themeToUse
+                                       });
+    $("#popupInfoButton").buttonMarkup({
+                                       icon: iconToUse
+                                       });
+},
+    
+    // ////////////////////////////
 
 	createModelAtLocation: function createModelAtLocationFn() {
 
@@ -20,7 +59,7 @@ var World = {
 		/*
 			Next the model object is loaded.
 		*/
-		var modelEarth = new AR.Model("assets/house.wt3", {
+		var modelEarth = new AR.Model("assets/earth.wt3", {
 			onLoaded: this.worldLoaded,
 			scale: {
 				x: 10,
