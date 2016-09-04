@@ -53,13 +53,13 @@
         self.architectView.debugDelegate = self;
         
         /* Use the -setLicenseKey method to unlock all Wikitude SDK features that you bought with your license. */
-        [self.architectView setLicenseKey:@"YOUR_LICENSE_KEY"];
+        [self.architectView setLicenseKey:@"D8WcqB12itUwjmRZeuUESTH7TUnnQtfB/+fhFLqQhKDpvdFr95YkTgddThQ0cE8qjuPC6Cdt3r9jSARYU/H122UbSNyAs+Wn5lK98APPLbF4RuFQJ9XYE84MFTfJJWX9Ty1U1IJMNnK0/oUr7mRhaNiJKynQWOmBruqvt/a+0KNTYWx0ZWRfX06kuYmFo3GHDuIiLktm8OnTqqpZH7KJE4uqcgs2Qgf+RCRROcJZzoc3RZqOf3Ph6vc/EoFQ2Z80gDWkajwhHXTdlB6SgXkYkAjOAvttrdfPn0x1N/7UY0Bc9j/Pdm8/ZOuzBz4wWAMbYLET2vWsf6Wr0RFYge8P+cIbf5Lt4GISw51zPvEiLlZWPZCtA1fq6cytk5G+GxBwHZxCTLafkKUzyAfT0VY9w5KeZy1oVmubjicaCrS/UGJSn8OuZFz39Ku69TcJrc3PCtd/AlR3Q7Pami32pTLYe3Lh6oES09r0++95j0DbxkTzP0AhPNxY5JNvTuePY9iVNe6pJGJ1RxxRjimk3Iygi80N931ps+Fygub2c4JO2e/Laiz74lcxYY113u59MYgoIlJvnTSc9rGnBHVmmJN0w2zVUf7jk74GT6ZdSWnG5jDesoD4SgHiR88syY/TofxVs31QdIpz22RITVN6BNAGbFsQWQsk9YiCVLqJJmhe42g="];
         
         /* The Architect World can be loaded independently from the WTArchitectView rendering.
            
            NOTE: The architectWorldNavigation property is assigned at this point. The navigation object is valid until another Architect World is loaded.
          */
-        self.architectWorldNavigation = [self.architectView loadArchitectWorldFromURL:[[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html" subdirectory:@"ArchitectWorld"] withRequiredFeatures:WTFeature_2DTracking];
+        self.architectWorldNavigation = [self.architectView loadArchitectWorldFromURL:[[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html" subdirectory:@"ArchitectWorld"] withRequiredFeatures:WTFeature_Geo];
         
         /* Because the WTArchitectView does some OpenGL rendering, frame updates have to be suspended and resumend when the application changes it's active state.
            Here, UIApplication notifications are used to respond to the active state changes.

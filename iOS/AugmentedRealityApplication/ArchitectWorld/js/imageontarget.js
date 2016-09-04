@@ -21,9 +21,9 @@ var World = {
 		*/
 
 		/* Create overlay for page one */
-		var imgOne = new AR.ImageResource("assets/imageOne.png");
+		var imgOne = new AR.ImageResource("assets/kid.png");
 		var overlayOne = new AR.ImageDrawable(imgOne, 1, {
-			offsetX: -0.15,
+			offsetX: 0,
 			offsetY: 0
 		});
 
@@ -43,7 +43,7 @@ var World = {
 		var cssDivRight = " style='display: table-cell;vertical-align: middle; text-align: left;'";
 		document.getElementById('loadingMessage').innerHTML =
 			"<div" + cssDivLeft + ">Scan Target &#35;1 (surfer):</div>" +
-			"<div" + cssDivRight + "><img src='assets/surfer.png'></img></div>";
+			"<div" + cssDivRight + "><img src='assets/board.png'></img></div>";
 
 		// Remove Scan target message after 10 sec.
 		setTimeout(function() {
