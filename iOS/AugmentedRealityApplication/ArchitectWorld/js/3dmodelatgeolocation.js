@@ -52,19 +52,21 @@ updateStatusMessage: function updateStatusMessageFn(message, isWarning) {
 		*/
 //		var location = new AR.RelativeLocation(null, 2, 0, 2);
         
-        var geoLoc = new AR.GeoLocation(37.785610, -122.397162);
+        var geoLoc = new AR.GeoLocation(37.786197, -122.402379);
         //a relative location being 12 meters north, 20 meters east and 13 meters higher than geoLoc
         var location = new AR.RelativeLocation(geoLoc, 2, 0, 2);
 
 		/*
 			Next the model object is loaded.
 		*/
-		var modelEarth = new AR.Model("assets/earth.wt3", {
+        
+        
+		var modelEarth = new AR.Model("assets/house3.wt3" , {
 			onLoaded: this.worldLoaded,
 			scale: {
-				x: 10,
-				y: 10,
-				z: 10
+				x: 3,
+				y: 3,
+				z: 3
 			}
 		});
 
@@ -90,6 +92,7 @@ updateStatusMessage: function updateStatusMessageFn(message, isWarning) {
 		var e = document.getElementById('loadingMessage');
 		e.parentElement.removeChild(e);
 	}
+
 };
 
 World.init();
