@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					DF8B55F41AE844D300E8075D = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 3D4NL969BE;
+						DevelopmentTeam = 7LPPPET6VM;
 					};
 					DF8B560D1AE844D400E8075D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -449,7 +449,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = b2b10;
+				PRODUCT_BUNDLE_IDENTIFIER = nelson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -470,7 +470,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = b2b10;
+				PRODUCT_BUNDLE_IDENTIFIER = nelson1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
