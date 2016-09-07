@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="1779"/>
+            <point key="canvasLocation" x="324" y="1083"/>
         </scene>
         <!--List-->
         <scene sceneID="Obm-cW-elV">
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gj-af-Yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="2498"/>
+            <point key="canvasLocation" x="96" y="2184"/>
         </scene>
         <!--Map-->
         <scene sceneID="YvZ-Uf-AcO">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf2-g8-yZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-524" y="2549"/>
+            <point key="canvasLocation" x="-688" y="2147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y3o-IM-Vhl">
@@ -132,11 +132,17 @@
                                 <rect key="frame" x="171" y="281" width="38" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="AR"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zkc-nd-Qcy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-gv-M8m">
                                 <rect key="frame" x="166" y="84" width="48" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="List"/>
+                                <connections>
+                                    <segue destination="aLq-3A-Mk0" kind="showDetail" id="4Yc-Oz-rdG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flr-ni-J42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="1100"/>
+            <point key="canvasLocation" x="792" y="1918"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uEq-Tz-i42">
@@ -167,11 +173,15 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW8-3D-biH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="1821"/>
+            <point key="canvasLocation" x="-608" y="1199"/>
         </scene>
     </scenes>
     <resources>
         <image name="map" width="25" height="25"/>
         <image name="very-basic-home-icon" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Yc-Oz-rdG"/>
+        <segue reference="zkc-nd-Qcy"/>
+    </inferredMetricsTieBreakers>
 </document>
