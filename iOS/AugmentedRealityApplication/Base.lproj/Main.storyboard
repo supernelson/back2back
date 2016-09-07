@@ -41,7 +41,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="1083"/>
+            <point key="canvasLocation" x="325" y="1086"/>
+        </scene>
+        <!--Mikaels View Controller-->
+        <scene sceneID="0gX-gs-nVK">
+            <objects>
+                <viewController id="dXh-Eu-BSA" customClass="MikaelsViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="liu-zN-04J"/>
+                        <viewControllerLayoutGuide type="bottom" id="mmJ-Ag-feJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k1c-bf-bfW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPu-aA-ivo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="1105"/>
         </scene>
         <!--List-->
         <scene sceneID="Obm-cW-elV">
@@ -85,7 +103,7 @@
         <!--Map-->
         <scene sceneID="YvZ-Uf-AcO">
             <objects>
-                <viewController id="h8v-t4-02m" sceneMemberID="viewController">
+                <viewController id="h8v-t4-02m" customClass="MapViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hZw-ul-qF8"/>
                         <viewControllerLayoutGuide type="bottom" id="5e5-rk-VgX"/>

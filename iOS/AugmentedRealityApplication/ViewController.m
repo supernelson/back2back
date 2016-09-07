@@ -22,9 +22,15 @@
 /* And keep a weak property to the navigation object which represents the loading status of your Architect World */
 @property (nonatomic, weak) WTNavigation                    *architectWorldNavigation;
 
+
+//Mikaels code
+@property (nonatomic, weak) NSObject *data;
+
 @end
 
 @implementation ViewController
+
+@synthesize data = _data;
 
 - (void)dealloc
 {

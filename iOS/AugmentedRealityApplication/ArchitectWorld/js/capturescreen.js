@@ -70,6 +70,66 @@ var World = {
             World.markerList.push(new Marker(singlePoi2));
         }
         
+        for (var currentPlaceNr = 2; currentPlaceNr < 3; currentPlaceNr++) {
+            var singlePoi3 = {
+                "id": 2,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "Mexican Museum",
+                "description": "Cool Place"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi3));
+        }
+        
+        for (var currentPlaceNr = 4; currentPlaceNr < 5; currentPlaceNr++) {
+            var singlePoi4 = {
+                "id": 3,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "Mexican Museum",
+                "description": "Cool Place"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi4));
+        }
+        
+        for (var currentPlaceNr = 6; currentPlaceNr < 7; currentPlaceNr++) {
+            var singlePoi5 = {
+                "id": 4,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "Mexican Museum",
+                "description": "Cool Place"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi5));
+        }
+        
+        for (var currentPlaceNr = 8; currentPlaceNr < 9; currentPlaceNr++) {
+            var singlePoi6 = {
+                "id": 5,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "Mexican Museum",
+                "description": "Cool Place"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi6));
+        }
+        
         
         
 //		World.markerList = [];
