@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149F26A91D8088F800AE36F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149F26A81D8088F800AE36F3 /* MapKit.framework */; };
 		84AC94671D7A54D40030CEFE /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94661D7A54D40030CEFE /* libc++.1.dylib */; };
 		84AC94691D7A54F50030CEFE /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94681D7A54F50030CEFE /* libz.1.dylib */; };
 		84AC946D1D7A59E40030CEFE /* WikitudeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		149F26A81D8088F800AE36F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84AC94641D7A54630030CEFE /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../usr/lib; sourceTree = "<group>"; };
 		84AC94661D7A54D40030CEFE /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		84AC94681D7A54F50030CEFE /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149F26A91D8088F800AE36F3 /* MapKit.framework in Frameworks */,
 				84AC946D1D7A59E40030CEFE /* WikitudeSDK.framework in Frameworks */,
 				84AC94691D7A54F50030CEFE /* libz.1.dylib in Frameworks */,
 				84AC94671D7A54D40030CEFE /* libc++.1.dylib in Frameworks */,
@@ -123,6 +126,7 @@
 		DF0E2D941AE8E6DD004180B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				149F26A81D8088F800AE36F3 /* MapKit.framework */,
 				84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */,
 				84AC946A1D7A59930030CEFE /* WikitudeSDK_iOS_5-2-0_2016-07-11_16-33-34 */,
 				84AC94681D7A54F50030CEFE /* libz.1.dylib */,

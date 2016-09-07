@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tok-G6-Y0u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6OH-H8-dxa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AR-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -17,14 +17,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4d-hU-5cs">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="i5E-oH-8dA"/>
+                                    <tabBarItem title="Item" id="lah-fk-pAf"/>
+                                    <tabBarItem title="Item" image="very-basic-home-icon" id="54o-Yx-VZs"/>
+                                    <tabBarItem title="Item" id="ltj-WX-zpI"/>
+                                    <tabBarItem title="Home" id="mC1-3B-Iyv"/>
+                                    <tabBarItem title="Item" id="57T-QC-gKS"/>
+                                    <tabBarItem title="Item" image="very-basic-home-icon" id="c8Y-9u-E6q"/>
+                                    <tabBarItem title="Item" id="y9J-7B-oEp"/>
+                                    <tabBarItem title="Item" id="FVf-OM-zdx"/>
+                                    <tabBarItem systemItem="more" id="vye-tU-WOq"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="AR" id="QOa-gc-DNg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="255"/>
+            <point key="canvasLocation" x="424" y="1779"/>
         </scene>
-        <!--List View Controller-->
+        <!--List-->
         <scene sceneID="Obm-cW-elV">
             <objects>
                 <viewController id="aLq-3A-Mk0" customClass="POIListViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,64 +72,106 @@
                             <constraint firstItem="Bq1-Yb-NMu" firstAttribute="leading" secondItem="v0y-fr-79R" secondAttribute="leadingMargin" id="fUy-Yz-ff5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="List" id="VKr-l7-1K3"/>
+                    <navigationItem key="navigationItem" id="OPH-kw-Kf9"/>
                     <connections>
                         <outlet property="tableView" destination="Bq1-Yb-NMu" id="mki-40-9Q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gj-af-Yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="964"/>
+            <point key="canvasLocation" x="268" y="2498"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="Hq0-LB-Z8A">
+        <!--Map-->
+        <scene sceneID="YvZ-Uf-AcO">
             <objects>
-                <viewController id="tok-G6-Y0u" customClass="HomeViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h8v-t4-02m" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Z8-Nl-Mrm"/>
-                        <viewControllerLayoutGuide type="bottom" id="ce3-cK-Nco"/>
+                        <viewControllerLayoutGuide type="top" id="hZw-ul-qF8"/>
+                        <viewControllerLayoutGuide type="bottom" id="5e5-rk-VgX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="R0L-HT-ERB">
+                    <view key="view" contentMode="scaleToFill" id="gMn-Nj-BSU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-TV-jDo">
-                                <rect key="frame" x="245" y="332" width="111" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="AR View"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="a3V-TS-kvB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6B-nk-iYl">
-                                <rect key="frame" x="255" y="105" width="93" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="List"/>
-                                <connections>
-                                    <segue destination="aLq-3A-Mk0" kind="show" id="9Yd-ns-Zcz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-f9-ncA">
-                                <rect key="frame" x="253" y="430" width="95" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Credits"/>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-aM-iLa">
+                                <rect key="frame" x="0.0" y="46" width="580" height="534"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="XYb-kp-Cnh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nf2-g8-yZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y3o-IM-Vhl">
+            <objects>
+                <viewController id="yCf-O6-9Dz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hL1-dH-giN"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEI-uY-rQg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfo-ij-uvY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="937-wi-jNf">
-                                <rect key="frame" x="271" y="215" width="59" height="48"/>
+                                <rect key="frame" x="162" y="175" width="59" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Map"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-f9-ncA">
+                                <rect key="frame" x="143" y="390" width="95" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Credits"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-DC-PmD">
+                                <rect key="frame" x="171" y="281" width="38" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="AR"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-gv-M8m">
+                                <rect key="frame" x="166" y="84" width="48" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="List"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Q6B-nk-iYl" firstAttribute="top" secondItem="4Z8-Nl-Mrm" secondAttribute="bottom" constant="85" id="EAa-NV-zQt"/>
-                            <constraint firstItem="Q6B-nk-iYl" firstAttribute="centerX" secondItem="aTo-TV-jDo" secondAttribute="centerX" id="kwC-Xe-vCl"/>
-                            <constraint firstItem="Q6B-nk-iYl" firstAttribute="centerX" secondItem="R0L-HT-ERB" secondAttribute="centerX" id="q32-rC-SZn"/>
-                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="very-basic-home-icon" id="4n2-Up-oVt">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IWc-fR-ddK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flr-ni-J42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="772"/>
+            <point key="canvasLocation" x="-42" y="1100"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uEq-Tz-i42">
+            <objects>
+                <tabBarController id="6OH-H8-dxa" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="BxB-AX-YUT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yCf-O6-9Dz" kind="relationship" relationship="viewControllers" id="p8c-JI-KUc"/>
+                        <segue destination="h8v-t4-02m" kind="relationship" relationship="viewControllers" id="u0f-tx-LG0"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8Ms-yH-AP4"/>
+                        <segue destination="aLq-3A-Mk0" kind="relationship" relationship="viewControllers" id="yvA-qm-E6V"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tW8-3D-biH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="1821"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map" width="25" height="25"/>
+        <image name="very-basic-home-icon" width="64" height="64"/>
+    </resources>
 </document>
