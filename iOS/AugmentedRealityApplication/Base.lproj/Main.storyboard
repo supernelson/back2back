@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="1086"/>
+            <point key="canvasLocation" x="841" y="482"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="Obm-cW-elV">
@@ -127,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gj-af-Yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="2210"/>
+            <point key="canvasLocation" x="1096" y="2170"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="YvZ-Uf-AcO">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf2-g8-yZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117" y="2097"/>
+            <point key="canvasLocation" x="555" y="1621"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y3o-IM-Vhl">
@@ -199,6 +199,9 @@
                                 <state key="normal" title="Map">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="h8v-t4-02m" kind="show" id="Nx1-7H-Nxh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-f9-ncA">
                                 <rect key="frame" x="131" y="389" width="120" height="49"/>
@@ -206,6 +209,9 @@
                                 <state key="normal" title="Credits">
                                     <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="b7w-jw-qKt" kind="show" id="h6e-u1-PJV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-DC-PmD">
                                 <rect key="frame" x="167" y="280" width="47" height="49"/>
@@ -245,9 +251,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flr-ni-J42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="1773"/>
+            <point key="canvasLocation" x="1096" y="1217"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="jPp-A1-tse">
             <objects>
                 <viewController id="b7w-jw-qKt" sceneMemberID="viewController">
@@ -258,9 +264,30 @@
                     <view key="view" contentMode="scaleToFill" id="cfD-rE-HKK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-Hz-gRz">
+                                <rect key="frame" x="0.0" y="15" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="11M-Uy-2N7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Abj-X8-V7b">
+                                            <connections>
+                                                <segue destination="6OH-H8-dxa" kind="show" id="ufK-iG-Zsc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pA5-a1-4Sp"/>
+                    <tabBarItem key="tabBarItem" title="" image="plainicon-com-53082-512px-0d6-0" id="pA5-a1-4Sp">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.32549019607843138" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yW9-zw-ddX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,7 +312,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW8-3D-biH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608" y="1199"/>
+            <point key="canvasLocation" x="-510" y="1088"/>
         </scene>
     </scenes>
     <resources>
@@ -294,13 +321,16 @@
         <image name="icon-map" width="25" height="25"/>
         <image name="light_sky_stars_background_85555_750x1334" width="375" height="667"/>
         <image name="list-2" width="42" height="42"/>
+        <image name="plainicon-com-53082-512px-0d6-0" width="42" height="42"/>
         <image name="unnamed-2" width="32" height="32"/>
         <image name="very-basic-home-icon" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zkc-nd-Qcy"/>
-        <segue reference="BbD-YW-j1R"/>
+        <segue reference="ufK-iG-Zsc"/>
+        <segue reference="h6e-u1-PJV"/>
         <segue reference="4Yc-Oz-rdG"/>
+        <segue reference="Nx1-7H-Nxh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
