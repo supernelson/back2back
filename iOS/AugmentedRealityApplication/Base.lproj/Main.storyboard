@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--AR-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4d-hU-5cs">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" selectionIndicatorImage="ajax-loader.gif" translatesAutoresizingMaskIntoConstraints="NO" id="s4d-hU-5cs">
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <tabBarItem systemItem="favorites" id="i5E-oH-8dA"/>
                                     <tabBarItem title="Item" id="lah-fk-pAf"/>
@@ -33,35 +33,38 @@
                                     <tabBarItem title="Item" id="FVf-OM-zdx"/>
                                     <tabBarItem systemItem="more" id="vye-tU-WOq"/>
                                 </items>
+                                <color key="barTintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="selectedImageTintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                             </tabBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6o-PA-bJw">
+                                <rect key="frame" x="0.0" y="69" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="PbP-cf-SlY">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RX4-UH-FaY">
+                                            <connections>
+                                                <segue destination="6OH-H8-dxa" kind="show" id="jnH-tE-cog"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AR" id="QOa-gc-DNg"/>
+                    <tabBarItem key="tabBarItem" title="" image="unnamed-2" id="QOa-gc-DNg">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.36862745098039218" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="1086"/>
         </scene>
-        <!--Mikaels View Controller-->
-        <scene sceneID="0gX-gs-nVK">
-            <objects>
-                <viewController id="dXh-Eu-BSA" customClass="MikaelsViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="liu-zN-04J"/>
-                        <viewControllerLayoutGuide type="bottom" id="mmJ-Ag-feJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="k1c-bf-bfW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QPu-aA-ivo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="728" y="1105"/>
-        </scene>
-        <!--List-->
+        <!--List View Controller-->
         <scene sceneID="Obm-cW-elV">
             <objects>
                 <viewController id="aLq-3A-Mk0" customClass="POIListViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,14 +76,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-Yb-NMu">
-                                <rect key="frame" x="20" y="28" width="554" height="564"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-Yb-NMu">
+                                <rect key="frame" x="20" y="77" width="554" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aLq-3A-Mk0" id="3XI-Q7-2NB"/>
                                     <outlet property="delegate" destination="aLq-3A-Mk0" id="Am2-3B-R9t"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksZ-Pf-rZR">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="QcH-of-KUi">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="s6d-km-D2T">
+                                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="6OH-H8-dxa" kind="show" id="BbD-YW-j1R"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -89,18 +105,31 @@
                             <constraint firstItem="Bq1-Yb-NMu" firstAttribute="centerX" secondItem="v0y-fr-79R" secondAttribute="centerX" constant="-3" id="bog-CF-2RW"/>
                             <constraint firstItem="Bq1-Yb-NMu" firstAttribute="leading" secondItem="v0y-fr-79R" secondAttribute="leadingMargin" id="fUy-Yz-ff5"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.36862745098039218" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" id="VKr-l7-1K3"/>
+                    <tabBarItem key="tabBarItem" title="" image="list-2" id="Wt8-IF-Tdg">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.36862745098039218" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="OPH-kw-Kf9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Bq1-Yb-NMu" id="mki-40-9Q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gj-af-Yjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="2184"/>
+            <point key="canvasLocation" x="384" y="2210"/>
         </scene>
-        <!--Map-->
+        <!--Map View Controller-->
         <scene sceneID="YvZ-Uf-AcO">
             <objects>
                 <viewController id="h8v-t4-02m" customClass="MapViewController" customModule="AugmentedRealityApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,9 +141,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-aM-iLa">
-                                <rect key="frame" x="0.0" y="46" width="580" height="534"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-aM-iLa">
+                                <rect key="frame" x="0.0" y="-33" width="600" height="633"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-qn-nX7">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="8e0-bs-rP4">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="caK-10-xbC">
+                                            <connections>
+                                                <segue destination="6OH-H8-dxa" kind="show" id="IVq-of-nFN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -124,11 +165,18 @@
                             <constraint firstItem="vqx-aM-iLa" firstAttribute="trailing" secondItem="gMn-Nj-BSU" secondAttribute="trailingMargin" id="fcL-yk-zgz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="XYb-kp-Cnh"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon-map" id="XYb-kp-Cnh">
+                        <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.36862745098039218" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nf2-g8-yZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="2147"/>
+            <point key="canvasLocation" x="-117" y="2097"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y3o-IM-Vhl">
@@ -142,42 +190,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light_sky_stars_background_85555_750x1334" translatesAutoresizingMaskIntoConstraints="NO" id="ymK-h9-ZHF">
+                                <rect key="frame" x="0.0" y="0.0" width="588" height="620"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="937-wi-jNf">
-                                <rect key="frame" x="162" y="175" width="59" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Map"/>
+                                <rect key="frame" x="156" y="174" width="70" height="49"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-f9-ncA">
-                                <rect key="frame" x="143" y="390" width="95" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Credits"/>
+                                <rect key="frame" x="131" y="389" width="120" height="49"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                <state key="normal" title="Credits">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQY-DC-PmD">
-                                <rect key="frame" x="171" y="281" width="38" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="AR"/>
+                                <rect key="frame" x="167" y="280" width="47" height="49"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                <state key="normal" title="AR">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="zkc-nd-Qcy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-gv-M8m">
-                                <rect key="frame" x="166" y="84" width="48" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="List"/>
+                                <rect key="frame" x="159" y="83" width="61" height="49"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                <state key="normal" title="List">
+                                    <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="aLq-3A-Mk0" kind="showDetail" id="4Yc-Oz-rdG"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19997376203536987" green="0.20001503825187683" blue="0.19997116923332214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value=" "/>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="very-basic-home-icon" id="4n2-Up-oVt">
+                    <tabBarItem key="tabBarItem" title="" image="very-basic-home-icon" id="4n2-Up-oVt" colorLabel="IBBuiltInLabel-Purple">
                         <inset key="imageInsets" minX="0.0" minY="10" maxX="0.0" maxY="-10"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.36862745098039218" green="0.14901960784313725" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flr-ni-J42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="1918"/>
+            <point key="canvasLocation" x="1228" y="1773"/>
         </scene>
         <!--Item-->
         <scene sceneID="jPp-A1-tse">
@@ -221,11 +289,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="map" width="25" height="25"/>
+        <image name=" " width="64" height="64"/>
+        <image name="ajax-loader.gif" width="46" height="46"/>
+        <image name="icon-map" width="25" height="25"/>
+        <image name="light_sky_stars_background_85555_750x1334" width="375" height="667"/>
+        <image name="list-2" width="42" height="42"/>
+        <image name="unnamed-2" width="32" height="32"/>
         <image name="very-basic-home-icon" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yvA-qm-E6V"/>
-        <segue reference="8Ms-yH-AP4"/>
+        <segue reference="zkc-nd-Qcy"/>
+        <segue reference="BbD-YW-j1R"/>
+        <segue reference="4Yc-Oz-rdG"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
