@@ -16,7 +16,14 @@ function Marker(poiData) {
 
     // create the AR.GeoLocation from the poi data
     var markerLocation = new AR.GeoLocation(poiData.latitude, poiData.longitude, poiData.altitude);
-    var markerLocation2 = new AR.GeoLocation(37.786069, -122.402819, 25);
+    var ml3MexicanMuseum = new AR.GeoLocation(37.786069, -122.402819, 25);
+    var mlDBC = new AR.GeoLocation(37.784945, -122.397741);
+    var ml3SalesForceTowers = new AR.GeoLocation(37.789782, -122.396649);
+    var ml4FutureMosconeCenter = new AR.GeoLocation(37.783715, -122.401227);
+    var ml5TransbayTransitCenter = new AR.GeoLocation(37.790692, -122.394213);
+    var ml6Earthquake1906 = new AR.GeoLocation(37.784882, -122.401310);
+
+
 
     // create an AR.ImageDrawable for the marker in idle state
     this.markerDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
@@ -97,24 +104,110 @@ function Marker(poiData) {
     
     var that = this
     
+    //////////////////
+    
+    
+//    World.model = new AR.Model("assets/house3.wt3", {
+//                               // fired when 3D model loaded successfully
+//                               onLoaded: function() {
+//                               
+//                               // define model as geoObject
+//                               World.GeoObject = new AR.GeoObject(markerLocation3, {
+//                                                                  drawables: {
+//                                                                  cam: [World.model]
+//                                                                  },
+//                                                                  onEnterFieldOfVision: function() {
+//                                                                  console.log('model visible');
+//                                                                  World.modelVisible = true;
+//                                                                  },
+//                                                                  onExitFieldOfVision: function() {
+//                                                                  console.log('model no longer visible');
+//                                                                  World.modelVisible = false;
+//                                                                  },
+//                                                                  onClick: function() {
+//                                                                  console.log('model clicked');
+//                                                                  }}
+//                                                                  );
+//                               },
+//                               onError: function(err) {
+//                               console.error(‘unexpected error occurred ’ + err);
+//                               }
+//    });
+    
+    
+    
+    ////////////////
+    
+    
     if (poiData.id === 1) {
-        this.markerObject = new AR.GeoObject(markerLocation2, {
+        this.markerObject = new AR.GeoObject(ml3MexicanMuseum, {
                                              drawables: {
                                              cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
                                              indicator: this.directionIndicatorDrawable,
                                              radar: this.radardrawables
                                              }
                                              });
-    } else {
-    
-    this.markerObject = new AR.GeoObject(markerLocation, {
-        drawables: {
-            cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
-            indicator: this.directionIndicatorDrawable,
-            radar: this.radardrawables
-        }
-    });
     }
+    
+    if (poiData.id === 2) {
+        this.markerObject = new AR.GeoObject(mlDBC, {
+                                             drawables: {
+                                             cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+                                             indicator: this.directionIndicatorDrawable,
+                                             radar: this.radardrawables
+                                             }
+                                             });
+    }
+    
+    if (poiData.id === 3) {
+        this.markerObject = new AR.GeoObject(ml3SalesForceTowers, {
+                                             drawables: {
+                                             cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+                                             indicator: this.directionIndicatorDrawable,
+                                             radar: this.radardrawables
+                                             }
+                                             });
+    }
+    
+    if (poiData.id === 4) {
+        this.markerObject = new AR.GeoObject(ml4FutureMosconeCenter, {
+                                             drawables: {
+                                             cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+                                             indicator: this.directionIndicatorDrawable,
+                                             radar: this.radardrawables
+                                             }
+                                             });
+    }
+    
+    if (poiData.id === 5) {
+        this.markerObject = new AR.GeoObject(ml5TransbayTransitCenter, {
+                                             drawables: {
+                                             cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+                                             indicator: this.directionIndicatorDrawable,
+                                             radar: this.radardrawables
+                                             }
+                                             });
+    }
+    
+    if (poiData.id === 6) {
+        this.markerObject = new AR.GeoObject(ml6Earthquake1906, {
+                                             drawables: {
+                                             cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+                                             indicator: this.directionIndicatorDrawable,
+                                            radar: this.radardrawables
+                                             }
+                                             });
+    }
+//     else {
+//    
+//    this.markerObject = new AR.GeoObject(markerLocation, {
+//        drawables: {
+//            cam: [this.markerDrawable_idle, this.markerDrawable_selected, this.titleLabel, this.descriptionLabel],
+//            indicator: this.directionIndicatorDrawable,
+//            radar: this.radardrawables
+//        }
+//    });
+//    }
 
     return this;
 }

@@ -55,14 +55,14 @@ var World = {
         		World.markerDrawable_selected = new AR.ImageResource("assets/marker_selected.png");
         		World.markerDrawable_directionIndicator = new AR.ImageResource("assets/indi.png");
 
-        for (var currentPlaceNr = 0; currentPlaceNr < 1; currentPlaceNr++) {
+        for (var currentPlaceNr = 1; currentPlaceNr < 2; currentPlaceNr++) {
             var singlePoi2 = {
                 "id": 1,
                 "latitude": parseFloat(poiData[currentPlaceNr].latitude),
                 "longitude": parseFloat(poiData[currentPlaceNr].longitude),
                 "altitude": parseFloat(poiData[currentPlaceNr].altitude),
                 "title": "Mexican Museum",
-                "description": "Cool Place"
+                "description": "A 700,000 sq. ft. residential tower and museum in downtown San Francisco will span 47 stories with the Mexican Museum on levels one through four."
             };
             
             
@@ -70,14 +70,30 @@ var World = {
             World.markerList.push(new Marker(singlePoi2));
         }
         
+        
         for (var currentPlaceNr = 2; currentPlaceNr < 3; currentPlaceNr++) {
-            var singlePoi3 = {
+            var singlePoi = {
                 "id": 2,
                 "latitude": parseFloat(poiData[currentPlaceNr].latitude),
                 "longitude": parseFloat(poiData[currentPlaceNr].longitude),
                 "altitude": parseFloat(poiData[currentPlaceNr].altitude),
-                "title": "Mexican Museum",
-                "description": "Cool Place"
+                "title": "DBC",
+                "description": "Super Cool Place"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi));
+        }
+        
+        for (var currentPlaceNr = 3; currentPlaceNr < 4; currentPlaceNr++) {
+            var singlePoi3 = {
+                "id": 3,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "SalesForce Towers",
+                "description": "This 1,070 ft. super tall office skyscraper spans 1,600,000 sq. ft. and will be the seventh tallest building in the country."
             };
             
             
@@ -85,52 +101,53 @@ var World = {
             World.markerList.push(new Marker(singlePoi3));
         }
         
+        
         for (var currentPlaceNr = 4; currentPlaceNr < 5; currentPlaceNr++) {
             var singlePoi4 = {
-                "id": 3,
+                "id": 4,
                 "latitude": parseFloat(poiData[currentPlaceNr].latitude),
                 "longitude": parseFloat(poiData[currentPlaceNr].longitude),
                 "altitude": parseFloat(poiData[currentPlaceNr].altitude),
-                "title": "Mexican Museum",
-                "description": "Cool Place"
+                "title": "Future Moscone Center",
+                "description": "While it is one of the most successful convention centers in the United States, Moscone Center is operating at capacity and is losing business to competing markets with more space to offer."
             };
             
             
             
             World.markerList.push(new Marker(singlePoi4));
         }
-        
-        for (var currentPlaceNr = 6; currentPlaceNr < 7; currentPlaceNr++) {
-            var singlePoi5 = {
-                "id": 4,
-                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
-                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
-                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
-                "title": "Mexican Museum",
-                "description": "Cool Place"
-            };
-            
-            
-            
-            World.markerList.push(new Marker(singlePoi5));
-        }
-        
-        for (var currentPlaceNr = 8; currentPlaceNr < 9; currentPlaceNr++) {
-            var singlePoi6 = {
+
+
+        for (var currentPlaceNr = 5; currentPlaceNr < 6; currentPlaceNr++) {
+            var singlePoi = {
                 "id": 5,
                 "latitude": parseFloat(poiData[currentPlaceNr].latitude),
                 "longitude": parseFloat(poiData[currentPlaceNr].longitude),
                 "altitude": parseFloat(poiData[currentPlaceNr].altitude),
-                "title": "Mexican Museum",
-                "description": "Cool Place"
+                "title": "Transbay Transit Center",
+                "description": "The Transit Center will connect 8 Bay Area counties, 11 transportation systems, and feature a 5.4-acre rooftop public park."
             };
             
             
             
-            World.markerList.push(new Marker(singlePoi6));
+            World.markerList.push(new Marker(singlePoi));
         }
         
-        
+        for (var currentPlaceNr = 6; currentPlaceNr < 7; currentPlaceNr++) {
+            var singlePoi = {
+                "id": 6,
+                "latitude": parseFloat(poiData[currentPlaceNr].latitude),
+                "longitude": parseFloat(poiData[currentPlaceNr].longitude),
+                "altitude": parseFloat(poiData[currentPlaceNr].altitude),
+                "title": "1906 Earthquake",
+                "description": "The earthquake struck the coast of Northern California at 5:12 a.m. on April 18 with an estimatedmoment magnitude of 7.8"
+            };
+            
+            
+            
+            World.markerList.push(new Marker(singlePoi));
+        }
+    
         
 //		World.markerList = [];
 
@@ -139,8 +156,8 @@ var World = {
 //		World.markerDrawable_selected = new AR.ImageResource("assets/marker_selected.png");
 //		World.markerDrawable_directionIndicator = new AR.ImageResource("assets/indi.png");
 
-		// loop through POI-information and create an AR.GeoObject (=Marker) per POI
-		for (var currentPlaceNr = 2; currentPlaceNr < poiData.length; currentPlaceNr++) {
+//		 loop through POI-information and create an AR.GeoObject (=Marker) per POI
+		for (var currentPlaceNr = 7; currentPlaceNr < poiData.length; currentPlaceNr++) {
 			var singlePoi = {
 				"id": poiData[currentPlaceNr].id,
 				"latitude": parseFloat(poiData[currentPlaceNr].latitude),
@@ -372,7 +389,7 @@ var World = {
 		World.updateStatusMessage('Requesting places from web-service');
 
 		// server-url to JSON content provider
-		var serverUrl = ServerInformation.POIDATA_SERVER + "?" + ServerInformation.POIDATA_SERVER_ARG_LAT + "=" + lat + "&" + ServerInformation.POIDATA_SERVER_ARG_LON + "=" + lon + "&" + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + "=5";
+		var serverUrl = ServerInformation.POIDATA_SERVER + "?" + ServerInformation.POIDATA_SERVER_ARG_LAT + "=" + lat + "&" + ServerInformation.POIDATA_SERVER_ARG_LON + "=" + lon + "&" + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + "=7";
 
 		var jqxhr = $.getJSON(serverUrl, function(data) {
 				World.loadPoisFromJsonData(data);
@@ -402,6 +419,8 @@ var World = {
         var miles2 = (b.distanceToUser - a.distanceToUser);
         return miles2;
 	}
+    
+    
 
 };
 
