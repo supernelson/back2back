@@ -10,6 +10,7 @@
 		149F26A91D8088F800AE36F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149F26A81D8088F800AE36F3 /* MapKit.framework */; };
 		149F26AB1D80CDA800AE36F3 /* MikaelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F26AA1D80CDA800AE36F3 /* MikaelsViewController.swift */; };
 		149F26AD1D80CFA300AE36F3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F26AC1D80CFA300AE36F3 /* MapViewController.swift */; };
+		149F26AF1D80E39300AE36F3 /* map in Resources */ = {isa = PBXBuildFile; fileRef = 149F26AE1D80E39200AE36F3 /* map */; };
 		84AC94671D7A54D40030CEFE /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94661D7A54D40030CEFE /* libc++.1.dylib */; };
 		84AC94691D7A54F50030CEFE /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC94681D7A54F50030CEFE /* libz.1.dylib */; };
 		84AC946D1D7A59E40030CEFE /* WikitudeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AC946C1D7A59E40030CEFE /* WikitudeSDK.framework */; };
@@ -53,6 +54,7 @@
 		149F26A81D8088F800AE36F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		149F26AA1D80CDA800AE36F3 /* MikaelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MikaelsViewController.swift; sourceTree = "<group>"; };
 		149F26AC1D80CFA300AE36F3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		149F26AE1D80E39200AE36F3 /* map */ = {isa = PBXFileReference; lastKnownFileType = folder; path = map; sourceTree = "<group>"; };
 		84AC94641D7A54630030CEFE /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../../../../usr/lib; sourceTree = "<group>"; };
 		84AC94661D7A54D40030CEFE /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		84AC94681D7A54F50030CEFE /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				DF8B56111AE844D400E8075D /* AugmentedRealityApplicationTests */,
 				DF0E2D941AE8E6DD004180B0 /* Frameworks */,
 				DF8B55F61AE844D300E8075D /* Products */,
+				149F26AE1D80E39200AE36F3 /* map */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Wikitude;
 				TargetAttributes = {
 					DF8B55F41AE844D300E8075D = {
@@ -306,6 +309,7 @@
 				DF0E2DB91AE907A8004180B0 /* ArchitectWorld in Resources */,
 				DF8B56091AE844D300E8075D /* LaunchScreen.xib in Resources */,
 				DF8B56061AE844D300E8075D /* Images.xcassets in Resources */,
+				149F26AF1D80E39300AE36F3 /* map in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +396,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -514,6 +519,7 @@
 				);
 				INFOPLIST_FILE = AugmentedRealityApplicationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wikitude.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AugmentedRealityApplication.app/AugmentedRealityApplication";
 			};
@@ -529,6 +535,7 @@
 				);
 				INFOPLIST_FILE = AugmentedRealityApplicationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wikitude.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AugmentedRealityApplication.app/AugmentedRealityApplication";
 			};

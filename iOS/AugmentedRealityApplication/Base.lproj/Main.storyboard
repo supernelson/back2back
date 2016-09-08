@@ -112,11 +112,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-aM-iLa">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-aM-iLa">
                                 <rect key="frame" x="0.0" y="46" width="580" height="534"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vqx-aM-iLa" secondAttribute="bottom" constant="20" symbolic="YES" id="Dmt-fB-O2P"/>
+                            <constraint firstItem="vqx-aM-iLa" firstAttribute="top" secondItem="hZw-ul-qF8" secondAttribute="bottom" constant="26" id="P8B-I0-iRe"/>
+                            <constraint firstItem="vqx-aM-iLa" firstAttribute="leading" secondItem="gMn-Nj-BSU" secondAttribute="leading" id="Rm4-tK-Req"/>
+                            <constraint firstItem="vqx-aM-iLa" firstAttribute="trailing" secondItem="gMn-Nj-BSU" secondAttribute="trailingMargin" id="fcL-yk-zgz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="XYb-kp-Cnh"/>
                 </viewController>
@@ -199,7 +205,7 @@
         <image name="very-basic-home-icon" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Yc-Oz-rdG"/>
-        <segue reference="zkc-nd-Qcy"/>
+        <segue reference="yvA-qm-E6V"/>
+        <segue reference="8Ms-yH-AP4"/>
     </inferredMetricsTieBreakers>
 </document>
