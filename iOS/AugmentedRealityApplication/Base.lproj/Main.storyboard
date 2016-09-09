@@ -41,6 +41,7 @@
                                 <items>
                                     <navigationItem id="PbP-cf-SlY">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="RX4-UH-FaY">
+                                            <color key="tintColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <segue destination="6OH-H8-dxa" kind="show" id="jnH-tE-cog"/>
                                             </connections>
@@ -149,6 +150,7 @@
                                 <items>
                                     <navigationItem id="8e0-bs-rP4">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="caK-10-xbC">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="6OH-H8-dxa" kind="show" id="IVq-of-nFN"/>
                                             </connections>
@@ -270,6 +272,7 @@
                                 <items>
                                     <navigationItem id="11M-Uy-2N7">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Abj-X8-V7b">
+                                            <color key="tintColor" red="0.199973762" green="0.2000150383" blue="0.19997116919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <segue destination="6OH-H8-dxa" kind="show" id="ufK-iG-Zsc"/>
                                             </connections>
