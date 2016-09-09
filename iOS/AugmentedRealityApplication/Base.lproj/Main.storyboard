@@ -90,7 +90,7 @@
                                 <items>
                                     <navigationItem id="QcH-of-KUi">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="s6d-km-D2T">
-                                            <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="6OH-H8-dxa" kind="show" id="BbD-YW-j1R"/>
                                             </connections>
@@ -330,10 +330,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8Ms-yH-AP4"/>
-        <segue reference="ufK-iG-Zsc"/>
-        <segue reference="cZo-Oa-PJn"/>
+        <segue reference="BbD-YW-j1R"/>
         <segue reference="yvA-qm-E6V"/>
         <segue reference="u0f-tx-LG0"/>
+        <segue reference="cZo-Oa-PJn"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
