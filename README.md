@@ -21,3 +21,5 @@ This is our final project at Dev Bootcamp. The purpose is to push ourselves beyo
 - Open 'Info.plist' and right click in the whitespace. Select 'Add Row'. In the first column of the new row type 'NSLocationWhenInUseUsageDescription'. Also, in the value column type the message you want to appear to the user, for example 'Allow this app to access your location'.
 - In Build Settings, type in the search bar 'other linker flgas'. Double click under the third column and add -ObjC
 
+<h2>Video Demo of our project</h2>
+https://youtu.be/b0IqhIGc9VY
