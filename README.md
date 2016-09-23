@@ -1,14 +1,16 @@
+<h1>Summary</h1>
+- This is our final project at Dev Bootcamp. We pushed beyond our natural limits by using completely new technologies and having only one week to finish the project. It is a showcase of our ability to learn on the fly and an example of strong teamwork required to complete this project.
+- 
 <h1>Before & After</h1>
-
 - Augmented Reality mobile app using Wikitude’s SDK, adding context for users to a physical space in a way we’ve never seen before.
 - Designed for the user to stand on a street corner and use the app to view significant historical events in the past, or perhaps more interestingly have a look forward into the future.
 
-<h1>Prerequisites</h1>
+<h2>Prerequisites</h2>
 - Obtain Wikitude's SDK & the free trial or full license.
 - XCode
 - Documents are provided on www.wikitude.com
 
-<h1>Installing</h1>
+<h2>Installing</h2>
 - Delete the Wikitude framework (in the framework folder) and replace it with the Wikitude framework that you downloaded directly from their site.
 - In Build Phases/Link Binary With Libraries, delete libc++.dylib and libz.dylib.
 - Delete libc++.dylib and libz.dylib from your project in x-code (they should be red)
